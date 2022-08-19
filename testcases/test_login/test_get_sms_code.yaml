@@ -1,0 +1,24 @@
+-
+  name: 获取短信验证码
+  request:
+    url: ${get_url(url)}verifyCode/sms
+    method: post
+    headers: ${get_headers()}
+    params:
+      mobile: ${AES_Encryption(Kp514OoWCfbGw98m,18326127537)}
+      purpose: 1
+      imageVerifyCode: ${read_extract_yaml(image_code)}
+  extract_from_log:
+    command: "tail -n 50 /data/logs/tomcat-8087/primary-app-api_debug.log | grep verifyCode:"
+    regular_keywords: 18326127537, verifyCode:(.*?)\n
+    extract_key: verifyCode
+    server_info: ${read_envinfo_yaml(env)}
+  validata:
+    - equals: { status_code: 200 }
+    - equals: { code: 1 }
+    - equals: { message: 成功 }
+
+
+
+
+

@@ -1,0 +1,14 @@
+-
+  name: env
+  info:
+    hostname: 39.102.75.26 # 测试环境
+    port: 22
+    username: root
+    password: S@xXo#eQvTmqR5c
+#-
+#  name: env
+#  info:
+#    hostname: 123.57.228.150 # 预上线环境
+#    port: 22
+#    username: developer
+#    password: Ql3jqt!Kdz*g^@z8

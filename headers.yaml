@@ -1,0 +1,10 @@
+Content-Type: 'application/x-www-form-urlencoded; charset=UTF-8'
+Accept: '*/*'
+clientId: 'XFSDKXJA10EC02000013'
+clientVersionCode: '10008'
+clientVersionName: '1.0.10008'
+clientVersion: '8.0.1'
+timestamp: ${get_timestamp()}
+platform: '1'
+language: 'zh_cn'
+userToken: ''

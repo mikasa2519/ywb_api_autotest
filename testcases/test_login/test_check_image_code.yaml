@@ -1,0 +1,12 @@
+-
+  name: 校验图片验证码
+  request:
+    url: ${get_url(url)}imageVerifyCode/checkVerifyCode
+    method: post
+    headers: ${get_headers()}
+    params:
+      imageVerifyCode: ${read_extract_yaml(image_code)}
+  validata:
+    - equals: {status_code: 200}
+    - equals: {code: 1}
+    - equals: {message: 成功}

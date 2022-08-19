@@ -1,0 +1,22 @@
+-
+  name: database
+  info:
+    hostname: 39.102.59.111 # 测试环境
+    port: 23306
+    username: root
+    password: TzZ%h2#Y
+#-
+#  name: database
+#  info:
+#    hostname: 172.17.27.166 # 预上线环境
+#    port: 43306
+#    username: primary_user
+#    password: f0R#KFj!^Qtx@QtW
+-
+  name: redis
+  info:
+    hostname: 39.102.59.111 # 测试环境
+    port: 22
+    username: roo
+    password: JYJJmr0z
+

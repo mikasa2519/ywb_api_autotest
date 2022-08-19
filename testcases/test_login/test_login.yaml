@@ -1,0 +1,16 @@
+-
+  name: 小学本登录
+  request:
+    url: ${get_url(url)}user/login
+    method: post
+    headers: ${get_headers()}
+    params:
+      mobile: ${AES_Encryption(Kp514OoWCfbGw98m,18326127537)}
+      verifyCode: ${read_extract_yaml(verifyCode)}
+  validata:
+    - equals: {status_code: 200}
+    - equals: {code: 1}
+    - equals: {message: 成功}
+    - contains: userToken
+  extract_from_res:
+    userToken: $..userToken
